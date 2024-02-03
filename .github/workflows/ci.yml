@@ -33,8 +33,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            rosven9856/php-fpm-alpine:${{ github.event.release.tag_name }}
-            rosven9856/php-fpm-alpine:latest
+            rosven9856/php-extended:${{ github.event.release.tag_name }}
+            rosven9856/php-extended:latest
 
       - name: send telegram message
         uses: appleboy/telegram-action@master
@@ -42,7 +42,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            Github. Creating new release php
+            Github. Creating new release php-extended
             
             Repository: ${{ github.repository }}
             Release: ${{ github.event.release.tag_name }}

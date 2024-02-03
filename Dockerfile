@@ -1,4 +1,4 @@
-FROM rosven9856/basic-php-fpm-alpine:latest
+FROM rosven9856/php:latest
 
 RUN docker-php-ext-install pdo pdo_mysql
 
